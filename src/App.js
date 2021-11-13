@@ -6,7 +6,7 @@ function App() {
   const [selectedImage, setSelectedImage] = useState(null);
 
   return (
-    <div className="App" style={{ position: "relative" }}>
+    <div className="App" style={{ position: "relative", overflow: "hidden" }}>
       <h1>Slider Component</h1>
       <ImageGrid setSelectedImage={setSelectedImage} />
       {selectedImage && (

@@ -1,5 +1,6 @@
 .imageGrid {
   width: 100vw;
+  height: min-content;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
