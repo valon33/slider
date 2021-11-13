@@ -7,7 +7,7 @@ const ImageGrid = ({ setSelectedImage }) => {
         <div className={styles.imageGrid}>
             {photos.map((img) => {
                 return (
-                    <div className={styles.imageContainer}>
+                    <div className={styles.imageContainer} key={img.id}>
                         <img
                             src={`/images/${img.name}.jpg`}
                             alt={img.name}

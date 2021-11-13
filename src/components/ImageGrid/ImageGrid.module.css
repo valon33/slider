@@ -1,22 +1,42 @@
 .imageGrid {
-    height: min-content;
-    width: 100vw;
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    overflow: hidden;
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 .imageContainer {
-    width: 23%;
-    height: 180px;
-    margin: 5px 0;
-    transition: all 0.5s ease;
+  width: 24%;
+  min-width: 10vw;
+  height: 230px;
+  margin: 5px 0;
+  transition: all 0.5s ease;
 }
 
 .image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1200px) {
+  .imageContainer {
+    width: 33%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .imageContainer {
+    width: 47%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .imageGrid {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .imageContainer {
+    width: 90%;
+  }
 }

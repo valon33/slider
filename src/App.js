@@ -3,20 +3,20 @@ import ImageGrid from "./components/ImageGrid/ImageGrid";
 import Modal from "./components/Modal/Modal";
 
 function App() {
-    const [selectedImage, setSelectedImage] = useState(null);
-    console.log(selectedImage);
-    return (
-        <div className="App" style={{ position: "relative" }}>
-            <h1>Slider Component</h1>
-            <ImageGrid setSelectedImage={setSelectedImage} />
-            {selectedImage && (
-                <Modal
-                    selectedImage={selectedImage}
-                    setSelectedImage={setSelectedImage}
-                />
-            )}
-        </div>
-    );
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  return (
+    <div className="App" style={{ position: "relative" }}>
+      <h1>Slider Component</h1>
+      <ImageGrid setSelectedImage={setSelectedImage} />
+      {selectedImage && (
+        <Modal
+          selectedImage={selectedImage}
+          setSelectedImage={setSelectedImage}
+        />
+      )}
+    </div>
+  );
 }
 
 export default App;
