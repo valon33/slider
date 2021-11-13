@@ -1,4 +1,5 @@
-#Demo
+# Demo
+
 You can view live demo [Gallery App](https://gallery-app-v.netlify.app/).
 
 # Getting Started with Create React App
