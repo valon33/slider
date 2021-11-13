@@ -1,0 +1,22 @@
+.imageGrid {
+    height: min-content;
+    width: 100vw;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.imageContainer {
+    width: 23%;
+    height: 180px;
+    margin: 5px 0;
+    transition: all 0.5s ease;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
