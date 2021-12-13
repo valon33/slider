@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Styles from "./Modal.module.css";
 import { photos } from "../../data";
 import { FaChevronRight, FaChevronLeft, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion/dist/framer-motion";
 
 const Modal = ({ selectedImage, setSelectedImage }) => {
   const [indexOfCurrentImg, setIndexOfCurrentImg] = useState(null);
@@ -47,12 +48,22 @@ const Modal = ({ selectedImage, setSelectedImage }) => {
   return (
     <>
       <div className={Styles.backdrop} onClick={handleClick} />
-
-      <img
+      <AnimatePresence>
+        <motion.img
+          key={`/images/${selectedImage}.jpg`}
+          src={`/images/${selectedImage}.jpg`}
+          initial={{ opacity: 0, y: 200 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          alt={selectedImage}
+          className={Styles.img}
+        />
+      </AnimatePresence>
+      {/* <img
         src={`/images/${selectedImage}.jpg`}
         alt={selectedImage}
         className={Styles.img}
-      />
+      /> */}
 
       <button
         className={`${Styles.modal_btn} ${Styles.modalBtnNext}`}
